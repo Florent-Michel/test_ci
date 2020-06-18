@@ -2,14 +2,16 @@
 
 int main(){
 
-	FILE *f;
+	FILE *input;
 	int size;
 
-	f = fopen("input.txt");
+	input = fopen("input.txt", "r");
 	fseek(f, 0L, SEEK_END);
-	size = ftell(f);
+	size = ftell(input);
 
 	printf("%d\n", size);
+	
+	fclose(input);
 	
 	return 0;
 

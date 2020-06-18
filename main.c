@@ -6,7 +6,7 @@ int main(){
 	int size;
 
 	input = fopen("input.txt", "r");
-	fseek(f, 0L, SEEK_END);
+	fseek(input, 0L, SEEK_END);
 	size = ftell(input);
 
 	printf("%d\n", size);
